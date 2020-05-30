@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+/Quarantine/obj/Debug
+/Quarantine/Logs
+/Quarantine/Temp
+/Quarantine/Library
