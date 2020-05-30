@@ -73,6 +73,16 @@ public class PlayerInputHandler : MonoBehaviour
         return false;
     }
 
+    public bool GetSlideInputDown()
+    {
+        if (CanProcessInput())
+        {
+            return Input.GetButtonDown(GameConstants.k_ButtonNameSlide);
+        }
+
+        return false;
+    }
+
     public bool GetJumpInputHeld()
     {
         if (CanProcessInput())

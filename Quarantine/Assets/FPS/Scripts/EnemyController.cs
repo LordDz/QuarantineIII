@@ -62,6 +62,11 @@ public class EnemyController : MonoBehaviour
     [Header("VFX")]
     [Tooltip("The VFX prefab spawned when the enemy dies")]
     public GameObject deathVFX;
+    public float deathVFXTime = 20f;
+
+    [Tooltip("The VFX prefab spawned when the enemy isHit")]
+    public List<GameObject> bloodVFX;
+
     [Tooltip("The point at which the death VFX is spawned")]
     public Transform deathVFXSpawnPoint;
 
@@ -340,6 +345,11 @@ public class EnemyController : MonoBehaviour
             }
             m_LastTimeDamaged = Time.time;
 
+            if (bloodVFX.Count > 0)
+            {
+                SpawnBlood();
+            }
+
             // play the damage tick sound
             if (damageTick && !m_WasDamagedThisFrame)
                 AudioUtility.CreateSFX(damageTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
@@ -352,7 +362,7 @@ public class EnemyController : MonoBehaviour
     {
         // spawn a particle system when dying
         var vfx = Instantiate(deathVFX, deathVFXSpawnPoint.position, Quaternion.identity);
-        Destroy(vfx, 5f);
+        Destroy(vfx, deathVFXTime);
 
         // tells the game flow manager to handle the enemy destuction
         m_EnemyManager.UnregisterEnemy(this);
@@ -365,6 +375,13 @@ public class EnemyController : MonoBehaviour
 
         // this will call the OnDestroy function
         Destroy(gameObject, deathDuration);
+    }
+
+    public void SpawnBlood()
+    {
+        var randBlood = bloodVFX[Random.Range(0, bloodVFX.Count)];
+        var vfx = Instantiate(randBlood, deathVFXSpawnPoint.position, Quaternion.identity);
+        Destroy(vfx, 5f);
     }
 
     private void OnDrawGizmosSelected()

@@ -135,9 +135,10 @@ Camera:
   m_ClearFlags: 3
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -389,19 +390,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   groundCheckDistance: 1
-  maxSpeedOnGround: 13
+  maxSpeedOnGround: 11
   movementSharpnessOnGround: 15
   maxSpeedCrouchedRatio: 0.5
-  maxSpeedInAir: 10
+  maxSpeedInAir: 20
   accelerationSpeedInAir: 25
   sprintSpeedModifier: 1.5
   killHeight: -50
   rotationSpeed: 200
   aimingRotationMultiplier: 0.4
-  jumpForce: 9
+  jumpForce: 8
+  slidingJump: 8
+  slidingForward: 15
   cameraHeightRatio: 0.8
   capsuleHeightStanding: 1.8
-  capsuleHeightCrouching: 0.9
+  capsuleHeightCrouching: 0.6
   crouchingSharpness: 15
   footstepSFXFrequency: 0.3
   footstepSFXFrequencyWhileSprinting: 0.2
@@ -801,9 +804,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2

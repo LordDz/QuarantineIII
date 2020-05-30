@@ -8,6 +8,7 @@
     public const string k_AxisNameJoystickLookVertical      = "Look Y";
     public const string k_AxisNameJoystickLookHorizontal    = "Look X";
     public const string k_ButtonNameJump                    = "Jump";
+    public const string k_ButtonNameSlide                   = "Slide";
     public const string k_ButtonNameFire                    = "Fire";
     public const string k_ButtonNameGamepadFire             = "Gamepad Fire";
     public const string k_ButtonNameSprint                  = "Sprint";

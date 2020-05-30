@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Runtime.InteropServices;
+using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
@@ -45,6 +46,10 @@ public class PlayerCharacterController : MonoBehaviour
     [Header("Jump")]
     [Tooltip("Force applied upward when jumping")]
     public float jumpForce = 9f;
+
+    [Tooltip("Force applied upward when sliding")]
+    public float slidingJump = 6f;
+    public float slidingForward = 15f;
 
     [Header("Stance")]
     [Tooltip("Ratio (0-1) of the character height where the camera will be at")]
@@ -254,7 +259,7 @@ public class PlayerCharacterController : MonoBehaviour
         }
 
         // character movement handling
-        bool isSprinting = m_InputHandler.GetSprintInputHeld();
+        bool isSprinting = false; // m_InputHandler.GetSprintInputHeld();
         {
             if (isSprinting)
             {
@@ -304,7 +309,27 @@ public class PlayerCharacterController : MonoBehaviour
                     }
                 }
 
-                // footsteps sound
+                if (isGrounded && m_InputHandler.GetSlideInputDown())
+                {
+                    characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
+
+                    // then, add the jumpSpeed value upwards
+                    characterVelocity += Vector3.up * slidingJump;
+                    characterVelocity += transform.forward * slidingForward;
+          
+                    m_LastTimeJumped = Time.time;
+                    hasJumpedThisFrame = true;
+
+                    isGrounded = false;
+                    m_GroundNormal = Vector3.up;
+
+                    if (SetCrouchingState(true, false))
+                    {
+                        
+                    }
+                }
+
+                    // footsteps sound
                 float chosenFootstepSFXFrequency = (isSprinting ? footstepSFXFrequencyWhileSprinting : footstepSFXFrequency);
                 if (m_footstepDistanceCounter >= 1f / chosenFootstepSFXFrequency)
                 {
