@@ -887,7 +887,7 @@ MonoBehaviour:
   shootType: 1
   projectilePrefab: {fileID: 528546716365072993, guid: ec753d54f333bb944b8b04884ad63828,
     type: 3}
-  delayBetweenShots: 0.8
+  delayBetweenShots: 1
   bulletSpreadAngle: 0
   bulletsPerShot: 1
   recoilForce: 1
@@ -905,6 +905,7 @@ MonoBehaviour:
   unparentMuzzleFlash: 0
   shootSFX: {fileID: 8300000, guid: a56e3c9f90e17894eb1625f603eceb54, type: 3}
   changeWeaponSFX: {fileID: 0}
+  ShellEject: {fileID: 0}
 --- !u!82 &2231955200838058728
 AudioSource:
   m_ObjectHideFlags: 0
