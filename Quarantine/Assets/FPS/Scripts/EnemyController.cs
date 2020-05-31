@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Health), typeof(Actor), typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
@@ -66,6 +68,9 @@ public class EnemyController : MonoBehaviour
 
     [Tooltip("The VFX prefab spawned when the enemy isHit")]
     public List<GameObject> bloodVFX;
+    public List<GameObject> bloodDecalSmall;
+    public List<GameObject> bloodDecalDeath;
+
 
     [Tooltip("The point at which the death VFX is spawned")]
     public Transform deathVFXSpawnPoint;
@@ -364,6 +369,9 @@ public class EnemyController : MonoBehaviour
         var vfx = Instantiate(deathVFX, deathVFXSpawnPoint.position, Quaternion.identity);
         Destroy(vfx, deathVFXTime);
 
+        SpawnBloodDecal(true);
+
+
         // tells the game flow manager to handle the enemy destuction
         m_EnemyManager.UnregisterEnemy(this);
 
@@ -380,9 +388,31 @@ public class EnemyController : MonoBehaviour
     public void SpawnBlood()
     {
         var randBlood = bloodVFX[Random.Range(0, bloodVFX.Count)];
-        var vfx = Instantiate(randBlood, deathVFXSpawnPoint.position, Quaternion.identity);
+        var vfx = Instantiate(randBlood, deathVFXSpawnPoint.position, transform.rotation);
         Destroy(vfx, 5f);
+
+        SpawnBloodDecal(false);
     }
+
+    private void SpawnBloodDecal(bool isDeath)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(deathVFXSpawnPoint.position, -Vector3.up, out hit))
+        {
+            Vector3 pos = new Vector3(hit.transform.position.x, hit.transform.position.y + 0.253f, hit.transform.position.z);
+            if (isDeath)
+            {
+                var vfx = Instantiate(bloodDecalDeath[Random.Range(0, bloodDecalDeath.Count)], pos, transform.rotation);
+            }
+            else
+            {
+                var vfx = Instantiate(bloodDecalSmall[Random.Range(0, bloodDecalSmall.Count)], pos, transform.rotation);
+
+            }
+        }
+    }
+
+
 
     private void OnDrawGizmosSelected()
     {

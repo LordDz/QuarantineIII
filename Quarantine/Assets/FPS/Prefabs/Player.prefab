@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 1661717823}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
   groundCheckDistance: 1
   maxSpeedOnGround: 11
   movementSharpnessOnGround: 15
-  maxSpeedCrouchedRatio: 0.5
+  maxSpeedCrouchedRatio: 0
   maxSpeedInAir: 20
   accelerationSpeedInAir: 25
   sprintSpeedModifier: 1.5
@@ -404,7 +404,7 @@ MonoBehaviour:
   slidingForward: 15
   cameraHeightRatio: 0.8
   capsuleHeightStanding: 1.8
-  capsuleHeightCrouching: 0.6
+  capsuleHeightCrouching: 0.8
   crouchingSharpness: 15
   footstepSFXFrequency: 0.3
   footstepSFXFrequencyWhileSprinting: 0.2

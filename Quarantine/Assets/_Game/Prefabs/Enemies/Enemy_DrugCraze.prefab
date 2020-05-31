@@ -152,6 +152,22 @@ MonoBehaviour:
   deathVFXTime: 20
   bloodVFX:
   - {fileID: 1634891203905684, guid: c7f0034d27899a04ea8d46f11fc212e1, type: 3}
+  bloodDecalSmall:
+  - {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  - {fileID: 100000, guid: cfc7596704bbd7f489156fcd4c05c7e9, type: 3}
+  - {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  - {fileID: 100000, guid: 6fe4d785744af2c40a2157f5b209d97f, type: 3}
+  - {fileID: 100000, guid: aec54d7a991d7b644b145d550a4b7831, type: 3}
+  - {fileID: 100000, guid: 14987c031123b98408a165a8bf1288d4, type: 3}
+  - {fileID: 100000, guid: 43dd1ba2a5dde844eb01240da13ab96b, type: 3}
+  bloodDecalDeath:
+  - {fileID: 100000, guid: ed3d8016c7482744bb81857d66df74ef, type: 3}
+  - {fileID: 100000, guid: 69eb1a65cacf11a448628412aef20f5d, type: 3}
+  - {fileID: 100000, guid: 96fbeb574f1254d4eb87d981542f7884, type: 3}
+  - {fileID: 100000, guid: 73ad741b7e7155c44884c6fb00d9162c, type: 3}
+  - {fileID: 100000, guid: cd3bd513ce92fc941901f016556edad7, type: 3}
+  - {fileID: 100000, guid: 035c54afad3b11d41976946b8dda70b8, type: 3}
+  - {fileID: 100000, guid: 1467ffa8f32706e46b0570f7015c6057, type: 3}
   deathVFXSpawnPoint: {fileID: 136806910776417928}
   lootPrefab: {fileID: 2529580269645609534, guid: 9973c412032becb4ca116ca08be62edf,
     type: 3}
@@ -564,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionSourcePoint: {fileID: 6571005840976436832}
-  detectionRange: 20
+  detectionRange: 40
   attackRange: 10
   knownTargetTimeout: 12
   animator: {fileID: 0}
