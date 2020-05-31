@@ -109,6 +109,7 @@ public class WeaponController : MonoBehaviour
     AudioSource m_ShootAudioSource;
 
     const string k_AnimAttackParameter = "Attack";
+    public FP_Shooting ShellEject;
 
     void Awake()
     {
@@ -254,6 +255,11 @@ public class WeaponController : MonoBehaviour
         {
             HandleShoot();
             m_CurrentAmmo -= 1;
+
+            if (ShellEject != null)
+            {
+                ShellEject.Shoot();
+            }
 
             return true;
         }
