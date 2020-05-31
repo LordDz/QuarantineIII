@@ -491,7 +491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6642737469181951605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.273, z: 0.364}
+  m_LocalPosition: {x: 0.066, y: 0.248, z: 0.2956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 825220459589154871}
@@ -509,7 +509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589da32c02434d04c8f98e2507dac20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPositionCar: {fileID: 0}
   Cardridge: {fileID: 1838114916151622, guid: a12bdde7557f6a64cb021f6e2d55c7ed, type: 3}
 --- !u!1 &6867164317952318007
 GameObject:
