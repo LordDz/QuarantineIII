@@ -388,7 +388,9 @@ public class EnemyController : MonoBehaviour
     public void SpawnBlood()
     {
         var randBlood = bloodVFX[Random.Range(0, bloodVFX.Count)];
-        var vfx = Instantiate(randBlood, deathVFXSpawnPoint.position, transform.rotation);
+        var rot = transform.rotation;
+        rot.eulerAngles = new Vector3(90, 0, 0);
+        var vfx = Instantiate(randBlood, deathVFXSpawnPoint.position, rot);
         Destroy(vfx, 5f);
 
         SpawnBloodDecal(false);
@@ -399,14 +401,16 @@ public class EnemyController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(deathVFXSpawnPoint.position, -Vector3.up, out hit))
         {
-            Vector3 pos = new Vector3(hit.transform.position.x, hit.transform.position.y + 0.253f, hit.transform.position.z);
+            Vector3 pos = new Vector3(hit.transform.position.x, hit.transform.position.y + 1.4f, hit.transform.position.z);
+            var rot = transform.rotation;
+            rot.eulerAngles = new Vector3(90, 0, 0);
             if (isDeath)
             {
-                var vfx = Instantiate(bloodDecalDeath[Random.Range(0, bloodDecalDeath.Count)], pos, transform.rotation);
+                var vfx = Instantiate(bloodDecalDeath[Random.Range(0, bloodDecalDeath.Count)], pos, rot);
             }
             else
             {
-                var vfx = Instantiate(bloodDecalSmall[Random.Range(0, bloodDecalSmall.Count)], pos, transform.rotation);
+                var vfx = Instantiate(bloodDecalSmall[Random.Range(0, bloodDecalSmall.Count)], pos, rot);
 
             }
         }

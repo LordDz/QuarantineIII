@@ -95,6 +95,7 @@ public class WeaponController : MonoBehaviour
     float m_LastTimeShot = Mathf.NegativeInfinity;
     float m_TimeBeginCharge;
     Vector3 m_LastMuzzlePosition;
+    PlayerWeaponsManager playerWeaponsManager;
 
     public GameObject owner { get; set; }
     public GameObject sourcePrefab { get; set; }
@@ -118,6 +119,8 @@ public class WeaponController : MonoBehaviour
 
         m_ShootAudioSource = GetComponent<AudioSource>();
         DebugUtility.HandleErrorIfNullGetComponent<AudioSource, WeaponController>(m_ShootAudioSource, this, gameObject);
+
+        playerWeaponsManager = transform.GetComponentInParent<PlayerWeaponsManager>();
     }
 
     void Update()
@@ -210,6 +213,12 @@ public class WeaponController : MonoBehaviour
     public void UseAmmo(float amount)
     {
         m_CurrentAmmo = Mathf.Clamp(m_CurrentAmmo - amount, 0f, maxAmmo);
+
+        if (m_CurrentAmmo < 1 && playerWeaponsManager)
+        {
+            playerWeaponsManager.SwitchWeapon(false);
+        }
+
         m_LastTimeShot = Time.time;
     }
 
@@ -254,7 +263,8 @@ public class WeaponController : MonoBehaviour
             && m_LastTimeShot + delayBetweenShots < Time.time)
         {
             HandleShoot();
-            m_CurrentAmmo -= 1;
+            UseAmmo(1);
+            //m_CurrentAmmo -= 1;
 
             if (ShellEject != null)
             {

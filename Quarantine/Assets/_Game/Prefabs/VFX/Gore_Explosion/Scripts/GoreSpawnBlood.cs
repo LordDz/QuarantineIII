@@ -50,7 +50,7 @@ public class GoreSpawnBlood : MonoBehaviour
             if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity, layerMask))
             {
                 Vector3 pos = new Vector3(hit.transform.position.x, hit.transform.position.y + 0.253f, hit.transform.position.z);
-                Instantiate(objToSpawn, pos, Quaternion.Euler(new Vector3(0, transform.eulerAngles.y, 0)));
+                Instantiate(objToSpawn, pos, Quaternion.Euler(new Vector3(90, transform.eulerAngles.y, 0)));
 
                 if (body)
                 {
