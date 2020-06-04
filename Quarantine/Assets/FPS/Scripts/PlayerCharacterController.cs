@@ -373,6 +373,29 @@ public class PlayerCharacterController : MonoBehaviour
         }
     }
 
+    public void BoostJump(float boostForce, AudioClip clip)
+    {
+        if (SetCrouchingState(false, false))
+        {
+            // start by canceling out the vertical component of our velocity
+            characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
+
+            // then, add the jumpSpeed value upwards
+            characterVelocity += Vector3.up * boostForce;
+
+            // play sound
+            audioSource.PlayOneShot(clip);
+
+            // remember last time we jumped because we need to prevent snapping to ground for a short time
+            m_LastTimeJumped = Time.time;
+            hasJumpedThisFrame = true;
+
+            // Force grounding to false
+            isGrounded = false;
+            m_GroundNormal = Vector3.up;
+        }
+    }
+
     // Returns true if the slope angle represented by the given normal is under the slope angle limit of the character controller
     bool IsNormalUnderSlopeLimit(Vector3 normal)
     {
