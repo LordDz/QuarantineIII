@@ -113,9 +113,8 @@ MonoBehaviour:
   root: {fileID: 106790115311484948}
   tip: {fileID: 106790115311484948}
   maxLifeTime: 5
-  impactVFX: {fileID: 4260779743739990948, guid: bbe6bdea7cd168e428a309e9eb2e728b,
-    type: 3}
-  impactVFXLifetime: 5
+  impactVFX: {fileID: 1121192042590650, guid: c5cc1fba924fd4b4a8c35f2c10ab6049, type: 3}
+  impactVFXLifetime: 2
   impactVFXSpawnOffset: 0.1
   impactSFXClip: {fileID: 8300000, guid: cba089de3eef16d46baeda4077140a74, type: 3}
   hittableLayers:
