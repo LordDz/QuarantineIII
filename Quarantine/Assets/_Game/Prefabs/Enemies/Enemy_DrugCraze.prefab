@@ -493,7 +493,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a4aebf7e92206fc4e81475b421e86302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -554,6 +554,9 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: b712286810543e64c9e8bfee52233da0, type: 3}
   - {fileID: 21300000, guid: b8766cd823a5f0d4ebe403efb4faf1d1, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 05e698f0b9477f54d9586653edfb3d42, type: 2}
+  - {fileID: 2100000, guid: a4aebf7e92206fc4e81475b421e86302, type: 2}
 --- !u!1 &6229573252830750061
 GameObject:
   m_ObjectHideFlags: 0

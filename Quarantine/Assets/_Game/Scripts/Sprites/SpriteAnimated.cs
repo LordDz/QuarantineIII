@@ -8,6 +8,7 @@ public class SpriteAnimated : MonoBehaviour
     //The file location of the sprites within the resources folder
     private SpriteRenderer spr;
     public Sprite[] sprites;
+    public Material[] materials;
     private int frame = 0;
     private float deltaTime = 0;
 
@@ -37,6 +38,7 @@ public class SpriteAnimated : MonoBehaviour
                 frame = sprites.Length - 1;
         }
         //Animate sprite with selected frame
-        spr.sprite = sprites[frame];
+        //spr.sprite = sprites[frame];
+        spr.material = materials[frame];
     }
 }
