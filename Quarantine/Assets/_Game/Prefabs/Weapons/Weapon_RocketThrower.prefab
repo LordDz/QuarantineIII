@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2225486910712267856}
   - component: {fileID: 8323776800172828795}
   - component: {fileID: 1284412032582177879}
-  - component: {fileID: 6471968429945751368}
   - component: {fileID: 3471509760121373335}
   - component: {fileID: 7583640433812654122}
   m_Layer: 10
@@ -100,38 +99,6 @@ MonoBehaviour:
   - {fileID: 2990922162098100107}
   fuelCellUsedPosition: {x: 0, y: 0.1, z: 0}
   fuelCellUnusedPosition: {x: 0, y: 0, z: 0}
---- !u!114 &6471968429945751368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2225486910712267859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b92ab16a4151e294a9e6f5a025221be2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chargingObject: {fileID: 0}
-  spinningFrame: {fileID: 0}
-  scale:
-    min: {x: 0.01, y: 0.01, z: 0.01}
-    max: {x: 1, y: 1, z: 1}
-  diskOrbitParticlePrefab: {fileID: 1087039822203223203, guid: b9cf7bff98404174d83a37d58c543aa5,
-    type: 3}
-  offset: {x: 0, y: 0, z: 0.764}
-  orbitY:
-    min: 3.1416
-    max: 12.5664
-  radius:
-    min: {x: 0.5, y: 0.5, z: 0.5}
-    max: {x: 1.5, y: 1.5, z: 1.5}
-  spinningSpeed:
-    min: 50
-    max: 1500
-  chargeSound: {fileID: 8300000, guid: 7a0479c7c60da2d45b93a1af1afe6c1e, type: 3}
-  loopChargeWeaponSFX: {fileID: 8300000, guid: b78fcf1f89aacdb468ce983629886f2d, type: 3}
-  fadeLoopDuration: 0.2
 --- !u!114 &3471509760121373335
 MonoBehaviour:
   m_ObjectHideFlags: 0
