@@ -66,4 +66,8 @@ crashlytics-build.properties
 # FMOD
 /ziltoid_audio/.cache
 /ziltoid_audio/.user
+/ziltoid_audio/.unsaved
 /Quarantine/fmod_editor.log
+
+#vs code
+/Quarantine/obj
