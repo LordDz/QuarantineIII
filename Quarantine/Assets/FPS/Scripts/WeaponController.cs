@@ -85,7 +85,8 @@ public class WeaponController : MonoBehaviour
     [Tooltip("Unparent the muzzle flash instance on spawn")]
     public bool unparentMuzzleFlash;
     [Tooltip("sound played when shooting")]
-    public AudioClip shootSFX;
+    public string shootSFX = "";
+
     [Tooltip("Sound played when changing to this weapon")]
     public AudioClip changeWeaponSFX;
 
@@ -332,9 +333,9 @@ public class WeaponController : MonoBehaviour
         m_LastTimeShot = Time.time;
 
         // play shoot SFX
-        if (shootSFX)
+        if(!string.IsNullOrEmpty(shootSFX))
         {
-            m_ShootAudioSource.PlayOneShot(shootSFX);
+            FMODUnity.RuntimeManager.PlayOneShot(shootSFX, transform.position);
         }
 
         // Trigger attack animation if there is any
