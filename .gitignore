@@ -62,3 +62,8 @@ crashlytics-build.properties
 /Quarantine/Logs
 /Quarantine/Temp
 /Quarantine/Library
+
+# FMOD
+/ziltoid_audio/.cache
+/ziltoid_audio/.user
+/Quarantine/fmod_editor.log

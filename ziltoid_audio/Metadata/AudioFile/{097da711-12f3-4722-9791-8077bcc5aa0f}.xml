@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{097da711-12f3-4722-9791-8077bcc5aa0f}">
+		<property name="assetPath">
+			<value>12 gauge SPAS-12 shotgun single shot close perspective 07_SFXBible_ss06856.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.9907709750566895</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{240de5d8-2de3-4d88-bad4-5294767c03db}</destination>
+		</relationship>
+	</object>
+</objects>
