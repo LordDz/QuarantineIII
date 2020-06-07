@@ -496,7 +496,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a4aebf7e92206fc4e81475b421e86302, type: 2}
+  - {fileID: 2100000, guid: 05e698f0b9477f54d9586653edfb3d42, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -920,7 +920,6 @@ MonoBehaviour:
   ammoReloadRate: 0.5
   ammoReloadDelay: 0.5
   maxAmmo: 100
-  RemoveUponZeroAmmo: 0
   automaticReleaseOnCharged: 0
   maxChargeDuration: 2
   ammoUsedOnStartCharge: 1
@@ -928,11 +927,8 @@ MonoBehaviour:
   weaponAnimator: {fileID: 0}
   muzzleFlashPrefab: {fileID: 3930201484039205849}
   unparentMuzzleFlash: 0
-  shootSFX:
-  - {fileID: 8300000, guid: 82798554095128c4099336e35c1bac85, type: 3}
-  - {fileID: 8300000, guid: 6b91ed37c7d9cfc46ab8909444dcdd46, type: 3}
-  - {fileID: 8300000, guid: a12e2d447ae23ea4cac387390a68c775, type: 3}
-  changeWeaponSFX: {fileID: 0}
+  shootSFX: 
+  changeWeaponSFX: 
   ShellEject: {fileID: 0}
 --- !u!82 &2231955200838058728
 AudioSource:

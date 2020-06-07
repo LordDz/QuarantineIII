@@ -29,6 +29,12 @@ public class DamageArea : MonoBehaviour
                     uniqueDamagedHealths.Add(health, damageable);
                 }
             }
+
+            var body = coll.GetComponentInChildren<Rigidbody>();
+            if (body)
+            {
+                body.AddForce(transform.forward * damage * 10f);
+            }
         }
 
         // Apply damages with distance falloff
