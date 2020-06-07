@@ -59,7 +59,7 @@ public class EnemyController : MonoBehaviour
 
     [Header("Sounds")]
     [Tooltip("Sound played when recieving damages")]
-    public AudioClip damageTick;
+    public List<AudioClip> damageSFX;
 
     [Header("VFX")]
     [Tooltip("The VFX prefab spawned when the enemy dies")]
@@ -356,8 +356,8 @@ public class EnemyController : MonoBehaviour
             }
 
             // play the damage tick sound
-            if (damageTick && !m_WasDamagedThisFrame)
-                AudioUtility.CreateSFX(damageTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
+            if (damageSFX.Count > 0 && !m_WasDamagedThisFrame)
+                AudioUtility.CreateSFX(damageSFX[Random.Range(0, damageSFX.Count -1)], transform.position, AudioUtility.AudioGroups.DamageTick, 1f);
 
             m_WasDamagedThisFrame = true;
         }
