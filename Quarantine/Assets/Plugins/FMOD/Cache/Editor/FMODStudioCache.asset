@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: snapshot:/dungeon_LPF
   guid: 9b3d1f17b279c843ac2c478262f47387
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: event:/weapon_rocket/rocket_fire
   guid: 640d6c4ac1256b46ba16ed11221bbfed
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
   Path: event:/bar_music
   guid: 5521bdb3fd0d414b8bd502f607061e75
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   Path: event:/weapon_rocket/rocket_explotion
   guid: c34a326391e1af4e9ff893fb011c0182
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 2159111561695201103}
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   EditorEvents:
   - {fileID: -3945203688499769744}
   - {fileID: 9210286513547288545}
@@ -264,10 +264,10 @@ MonoBehaviour:
   - {fileID: -7067394454539094790}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   StringsBanks:
   - {fileID: 2159111561695201103}
-  stringsBankWriteTime: 637270632460000000
+  stringsBankWriteTime: 637271342900000000
   cacheVersion: 3
 --- !u!114 &862930730299893211
 MonoBehaviour:
@@ -302,7 +302,7 @@ MonoBehaviour:
   Path: event:/weapon_laser/laser_reload
   guid: e1e2268d1120b84eaad6f3dc4af055c7
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../ziltoid_audio/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637270632460000000
+  lastModified: 637271342900000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -435,7 +435,7 @@ MonoBehaviour:
   Path: event:/weapon_pistol/pistol_reload
   guid: f6ebfa71b38ef84e86c71e57955ee0c4
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -458,7 +458,7 @@ MonoBehaviour:
   Path: event:/weapon_laser/laser_fire
   guid: 64a2a31408fdf44ca5b00568c5ffbb83
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -499,7 +499,7 @@ MonoBehaviour:
   Path: event:/weapon_shotgun/shotgun_fire
   guid: 34c07db236600c4cb3a02eaeae61feea
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -543,6 +543,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &7467563339749287159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637271342900000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &8500820885782213722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,7 +576,7 @@ MonoBehaviour:
   Path: event:/weapon_shotgun/shotgun_reload
   guid: 2b8aaae51f6e8b4c9ba5eb68458de7ae
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -599,7 +617,7 @@ MonoBehaviour:
   Path: event:/weapon_pistol/pistol_fire
   guid: 0c41cffdc5df0f46b5a8aaa28b5ce135
   Banks:
-  - {fileID: 5359986537494224677}
+  - {fileID: 7467563339749287159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

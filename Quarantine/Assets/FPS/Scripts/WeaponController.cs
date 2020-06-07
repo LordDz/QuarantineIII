@@ -19,7 +19,6 @@ public struct CrosshairData
     public Color crosshairColor;
 }
 
-[RequireComponent(typeof(AudioSource))]
 public class WeaponController : MonoBehaviour
 {
     [Header("Information")]
@@ -88,7 +87,7 @@ public class WeaponController : MonoBehaviour
     public string shootSFX = "";
 
     [Tooltip("Sound played when changing to this weapon")]
-    public AudioClip changeWeaponSFX;
+    public string changeWeaponSFX;
 
     public UnityAction onShoot;
 
@@ -203,9 +202,9 @@ public class WeaponController : MonoBehaviour
     {
         weaponRoot.SetActive(show);
 
-        if (show && changeWeaponSFX)
+        if (show && !string.IsNullOrEmpty(changeWeaponSFX))
         {
-            m_ShootAudioSource.PlayOneShot(changeWeaponSFX);
+            FMODUnity.RuntimeManager.PlayOneShotAttached(changeWeaponSFX, this.gameObject);
         }
 
         isWeaponActive = show;
@@ -335,7 +334,7 @@ public class WeaponController : MonoBehaviour
         // play shoot SFX
         if(!string.IsNullOrEmpty(shootSFX))
         {
-            FMODUnity.RuntimeManager.PlayOneShot(shootSFX, transform.position);
+            FMODUnity.RuntimeManager.PlayOneShotAttached(shootSFX, this.gameObject);
         }
 
         // Trigger attack animation if there is any

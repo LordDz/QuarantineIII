@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3443833415211153346}
   - component: {fileID: 3443833415211153347}
   - component: {fileID: 6809458216475554119}
+  - component: {fileID: 6188408509751341618}
   m_Layer: 0
   m_Name: bar_music
   m_TagString: Untagged
@@ -44,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Player
   Event: event:/bar_music
-  PlayEvent: 11
-  StopEvent: 12
+  PlayEvent: 3
+  StopEvent: 4
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 1
@@ -68,3 +69,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 60
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6188408509751341618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3443833415211153344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db1fe3276692ef4695052f0ff62b621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
