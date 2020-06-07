@@ -235,6 +235,12 @@ public class ProjectileStandard : MonoBehaviour
             AudioUtility.CreateSFX(impactSFXClip, point, AudioUtility.AudioGroups.Impact, 1f, 3f);
         }
 
+        Rigidbody body = collider.GetComponentInChildren<Rigidbody>();
+        if (body)
+        {
+            body.AddForce(speed * transform.forward);
+        }
+
         // Self Destruct
         Destroy(this.gameObject);
     }
