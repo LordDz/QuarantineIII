@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public enum WeaponShootType
@@ -20,7 +19,6 @@ public struct CrosshairData
     public Color crosshairColor;
 }
 
-[RequireComponent(typeof(AudioSource))]
 public class WeaponController : MonoBehaviour
 {
     [Header("Information")]
@@ -68,9 +66,6 @@ public class WeaponController : MonoBehaviour
     [Tooltip("Maximum amount of ammo in the gun")]
     public float maxAmmo = 8;
 
-    [Tooltip("Should the gun be removed when it has 0 ammo")]
-    public bool RemoveUponZeroAmmo = false;
-
     [Header("Charging parameters (charging weapons only)")]
     [Tooltip("Trigger a shot when maximum charge is reached")]
     public bool automaticReleaseOnCharged;
@@ -88,10 +83,11 @@ public class WeaponController : MonoBehaviour
     public GameObject muzzleFlashPrefab;
     [Tooltip("Unparent the muzzle flash instance on spawn")]
     public bool unparentMuzzleFlash;
-    [Tooltip("Random sound played when shooting")]
-    public List<AudioClip> shootSFX;
+    [Tooltip("sound played when shooting")]
+    public string shootSFX = "";
+
     [Tooltip("Sound played when changing to this weapon")]
-    public AudioClip changeWeaponSFX;
+    public string changeWeaponSFX;
 
     public UnityAction onShoot;
 
@@ -206,9 +202,9 @@ public class WeaponController : MonoBehaviour
     {
         weaponRoot.SetActive(show);
 
-        if (show && changeWeaponSFX)
+        if (show && !string.IsNullOrEmpty(changeWeaponSFX))
         {
-            m_ShootAudioSource.PlayOneShot(changeWeaponSFX);
+            FMODUnity.RuntimeManager.PlayOneShotAttached(changeWeaponSFX, this.gameObject);
         }
 
         isWeaponActive = show;
@@ -220,14 +216,7 @@ public class WeaponController : MonoBehaviour
 
         if (m_CurrentAmmo < 1 && playerWeaponsManager)
         {
-            if (RemoveUponZeroAmmo)
-            {
-                playerWeaponsManager.RemoveWeapon(this);
-            }
-            else
-            {
-                playerWeaponsManager.SwitchWeapon(false);
-            }
+            playerWeaponsManager.SwitchWeapon(false);
         }
 
         m_LastTimeShot = Time.time;
@@ -343,9 +332,9 @@ public class WeaponController : MonoBehaviour
         m_LastTimeShot = Time.time;
 
         // play shoot SFX
-        if (shootSFX.Count > 0)
+        if(!string.IsNullOrEmpty(shootSFX))
         {
-            m_ShootAudioSource.PlayOneShot(shootSFX[Random.Range(0, shootSFX.Count - 1)]);
+            FMODUnity.RuntimeManager.PlayOneShotAttached(shootSFX, this.gameObject);
         }
 
         // Trigger attack animation if there is any

@@ -1,0 +1,673 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7176829679369907293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270616218900542
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7067394454539094790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/dungeon_LPF
+  m_EditorClassIdentifier: 
+  Path: snapshot:/dungeon_LPF
+  guid: 9b3d1f17b279c843ac2c478262f47387
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6871776886588929145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/weapon_rocket/rocket_fire
+  m_EditorClassIdentifier: 
+  Path: event:/weapon_rocket/rocket_fire
+  guid: 640d6c4ac1256b46ba16ed11221bbfed
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-6806953434596686566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637271384160000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6687353445401217125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270619949348116
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6232230935630537953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270605309648101
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3945203688499769744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/bar_music
+  m_EditorClassIdentifier: 
+  Path: event:/bar_music
+  guid: 5521bdb3fd0d414b8bd502f607061e75
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 55
+  Length: 31384
+--- !u!114 &-3285927463939471764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270615081717794
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1889062894863339234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270609832523057
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1853042207930797069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270615850311116
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-962106239672158845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270612007013096
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-772353020634460216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270617068104934
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-419557562358990947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/weapon_rocket/rocket_explotion
+  m_EditorClassIdentifier: 
+  Path: event:/weapon_rocket/rocket_explotion
+  guid: c34a326391e1af4e9ff893fb011c0182
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 2159111561695201103}
+  - {fileID: -6806953434596686566}
+  EditorEvents:
+  - {fileID: -3945203688499769744}
+  - {fileID: 9210286513547288545}
+  - {fileID: 8500820885782213722}
+  - {fileID: 4838873371071440586}
+  - {fileID: -6871776886588929145}
+  - {fileID: 4175313131755823734}
+  - {fileID: -419557562358990947}
+  - {fileID: 1027988510749498525}
+  - {fileID: 4122319030925486832}
+  - {fileID: -7067394454539094790}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -6806953434596686566}
+  StringsBanks:
+  - {fileID: 2159111561695201103}
+  stringsBankWriteTime: 637271384160000000
+  cacheVersion: 3
+--- !u!114 &862930730299893211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270610587198195
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1027988510749498525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/weapon_laser/laser_reload
+  m_EditorClassIdentifier: 
+  Path: event:/weapon_laser/laser_reload
+  guid: e1e2268d1120b84eaad6f3dc4af055c7
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1259
+--- !u!114 &2159111561695201103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637271384160000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1210
+  Exists: 1
+--- !u!114 &2765758018857219716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270404330009680
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2900671284872329898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270570500000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2989465009232891649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270405192211048
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3479926752279701444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270406418675195
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3498183212579575507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637271384160000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3531397792876957174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270611568794053
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4122319030925486832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/weapon_pistol/pistol_reload
+  m_EditorClassIdentifier: 
+  Path: event:/weapon_pistol/pistol_reload
+  guid: f6ebfa71b38ef84e86c71e57955ee0c4
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 278
+--- !u!114 &4175313131755823734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/weapon_laser/laser_fire
+  m_EditorClassIdentifier: 
+  Path: event:/weapon_laser/laser_fire
+  guid: 64a2a31408fdf44ca5b00568c5ffbb83
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1824
+--- !u!114 &4264729146769856514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270616814705642
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &4838873371071440586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/weapon_shotgun/shotgun_fire
+  m_EditorClassIdentifier: 
+  Path: event:/weapon_shotgun/shotgun_fire
+  guid: 34c07db236600c4cb3a02eaeae61feea
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &5359986537494224677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270632460000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7169440030478742126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270627171822380
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7467563339749287159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637271342900000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8500820885782213722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/weapon_shotgun/shotgun_reload
+  m_EditorClassIdentifier: 
+  Path: event:/weapon_shotgun/shotgun_reload
+  guid: 2b8aaae51f6e8b4c9ba5eb68458de7ae
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 284
+--- !u!114 &9196644984811974442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ziltoid_audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637270611070806506
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &9210286513547288545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/weapon_pistol/pistol_fire
+  m_EditorClassIdentifier: 
+  Path: event:/weapon_pistol/pistol_fire
+  guid: 0c41cffdc5df0f46b5a8aaa28b5ce135
+  Banks:
+  - {fileID: 3498183212579575507}
+  - {fileID: -6806953434596686566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1942

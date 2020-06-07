@@ -166,7 +166,6 @@ MonoBehaviour:
   ammoReloadRate: 1
   ammoReloadDelay: 1
   maxAmmo: 4
-  RemoveUponZeroAmmo: 0
   automaticReleaseOnCharged: 0
   maxChargeDuration: 1
   ammoUsedOnStartCharge: 0
@@ -175,8 +174,7 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 748781637555137343, guid: 4f5d4e5eaa0e5104791549cea3dc3f23,
     type: 3}
   unparentMuzzleFlash: 0
-  shootSFX:
-  - {fileID: 8300000, guid: 573b8452037305b4faa15857cce89a6c, type: 3}
+  shootSFX: event:/weapon_rocket/rocket_fire
   changeWeaponSFX: {fileID: 8300000, guid: 7b83d61917ac1224f942a0609b1221f2, type: 3}
   ShellEject: {fileID: 0}
 --- !u!114 &8745372878802205896

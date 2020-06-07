@@ -199,7 +199,6 @@ MonoBehaviour:
   ammoReloadRate: 1
   ammoReloadDelay: 1
   maxAmmo: 8
-  RemoveUponZeroAmmo: 0
   automaticReleaseOnCharged: 0
   maxChargeDuration: 2
   ammoUsedOnStartCharge: 1
@@ -208,8 +207,7 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 748781637555137343, guid: 9f671b22f25370048a18fb1f821294ec,
     type: 3}
   unparentMuzzleFlash: 0
-  shootSFX:
-  - {fileID: 8300000, guid: 5f69772babda0e64d92e8525aeb5b92f, type: 3}
+  shootSFX: event:/weapon_pistol/pistol_fire
   changeWeaponSFX: {fileID: 8300000, guid: 7b83d61917ac1224f942a0609b1221f2, type: 3}
   ShellEject: {fileID: 279564316808276971}
 --- !u!114 &8745372878802205896

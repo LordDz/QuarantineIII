@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{28009d2b-8b12-4001-ab30-09822c635471}">
+		<property name="assetPath">
+			<value>Shotgun_Chamber_Shell_8.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.28462585034013604</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{240de5d8-2de3-4d88-bad4-5294767c03db}</destination>
+		</relationship>
+	</object>
+</objects>
