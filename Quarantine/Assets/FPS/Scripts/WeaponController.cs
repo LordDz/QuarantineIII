@@ -67,6 +67,9 @@ public class WeaponController : MonoBehaviour
     [Tooltip("Maximum amount of ammo in the gun")]
     public float maxAmmo = 8;
 
+    [Tooltip("Should the gun be removed when it has 0 ammo")]
+    public bool RemoveUponZeroAmmo = false;
+
     [Header("Charging parameters (charging weapons only)")]
     [Tooltip("Trigger a shot when maximum charge is reached")]
     public bool automaticReleaseOnCharged;
@@ -216,7 +219,14 @@ public class WeaponController : MonoBehaviour
 
         if (m_CurrentAmmo < 1 && playerWeaponsManager)
         {
-            playerWeaponsManager.SwitchWeapon(false);
+            if (RemoveUponZeroAmmo)
+            {
+                playerWeaponsManager.RemoveWeapon(this);
+            }
+            else
+            {
+                playerWeaponsManager.SwitchWeapon(false);
+            }
         }
 
         m_LastTimeShot = Time.time;

@@ -515,6 +515,7 @@ MonoBehaviour:
   footstepSFXFrequencyWhileSprinting: 0.2
   footstepSFX: {fileID: 8300000, guid: f404f8d3c2a4b4f48989fb1120e78fb8, type: 3}
   jumpSFX: {fileID: 8300000, guid: 13b59a14d34add64d84a623867546ff1, type: 3}
+  slideSFX: {fileID: 8300000, guid: 13b59a14d34add64d84a623867546ff1, type: 3}
   landSFX: {fileID: 8300000, guid: d0f1afed8fa916244af6ca73579ded67, type: 3}
   fallDamageSFX: {fileID: 8300000, guid: ef980d09b569380459e609fe90ef1db2, type: 3}
   recievesFallDamage: 1
@@ -522,6 +523,8 @@ MonoBehaviour:
   maxSpeedForFallDamage: 40
   fallDamageAtMinSpeed: 10
   fallDamageAtMaxSpeed: 30
+  CanDoubleJump: 1
+  NrOfJumps: 2
 --- !u!114 &1360575517897679518
 MonoBehaviour:
   m_ObjectHideFlags: 0

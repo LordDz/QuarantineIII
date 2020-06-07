@@ -70,6 +70,8 @@ public class PlayerCharacterController : MonoBehaviour
     public AudioClip footstepSFX;
     [Tooltip("Sound played when jumping")]
     public AudioClip jumpSFX;
+    [Tooltip("Sound played when sliding")]
+    public AudioClip slideSFX;
     [Tooltip("Sound played when landing")]
     public AudioClip landSFX;
     [Tooltip("Sound played when taking damage froma fall")]
@@ -94,6 +96,11 @@ public class PlayerCharacterController : MonoBehaviour
     public bool hasJumpedThisFrame { get; private set; }
     public bool isDead { get; private set; }
     public bool isCrouching { get; private set; }
+
+    public bool CanDoubleJump = true;
+    public int NrOfJumps = 2;
+    private int nrOfJumpsLeft = 2;
+
     public float RotationMultiplier
     {
         get
@@ -166,6 +173,10 @@ public class PlayerCharacterController : MonoBehaviour
         // landing
         if (isGrounded && !wasGrounded)
         {
+            nrOfJumpsLeft = NrOfJumps;
+
+            SetCrouchingState(false, false);
+
             // Fall damage
             float fallSpeed = -Mathf.Min(characterVelocity.y, m_LatestImpactSpeed.y);
             float fallSpeedRatio = (fallSpeed - minSpeedForFallDamage) / (maxSpeedForFallDamage - minSpeedForFallDamage);
@@ -284,50 +295,7 @@ public class PlayerCharacterController : MonoBehaviour
                 // smoothly interpolate between our current velocity and the target velocity based on acceleration speed
                 characterVelocity = Vector3.Lerp(characterVelocity, targetVelocity, movementSharpnessOnGround * Time.deltaTime);
 
-                // jumping
-                if (isGrounded && m_InputHandler.GetJumpInputDown())
-                {
-                    // force the crouch state to false
-                    if (SetCrouchingState(false, false))
-                    {
-                        // start by canceling out the vertical component of our velocity
-                        characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
-
-                        // then, add the jumpSpeed value upwards
-                        characterVelocity += Vector3.up * jumpForce;
-
-                        // play sound
-                        audioSource.PlayOneShot(jumpSFX);
-
-                        // remember last time we jumped because we need to prevent snapping to ground for a short time
-                        m_LastTimeJumped = Time.time;
-                        hasJumpedThisFrame = true;
-
-                        // Force grounding to false
-                        isGrounded = false;
-                        m_GroundNormal = Vector3.up;
-                    }
-                }
-
-                if (isGrounded && m_InputHandler.GetSlideInputDown())
-                {
-                    characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
-
-                    // then, add the jumpSpeed value upwards
-                    characterVelocity += Vector3.up * slidingJump;
-                    characterVelocity += transform.forward * slidingForward;
-          
-                    m_LastTimeJumped = Time.time;
-                    hasJumpedThisFrame = true;
-
-                    isGrounded = false;
-                    m_GroundNormal = Vector3.up;
-
-                    if (SetCrouchingState(true, false))
-                    {
-                        
-                    }
-                }
+                
 
                     // footsteps sound
                 float chosenFootstepSFXFrequency = (isSprinting ? footstepSFXFrequencyWhileSprinting : footstepSFXFrequency);
@@ -354,6 +322,58 @@ public class PlayerCharacterController : MonoBehaviour
 
                 // apply the gravity to the velocity
                 characterVelocity += Vector3.down * gravityDownForce * Time.deltaTime;
+            }
+
+            // jumping
+            if (((!CanDoubleJump && isGrounded) || (CanDoubleJump && nrOfJumpsLeft > 0)) && m_InputHandler.GetJumpInputDown())
+            {
+                // force the crouch state to false
+                if (SetCrouchingState(false, false))
+                {
+                    // start by canceling out the vertical component of our velocity
+                    characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
+
+                    // then, add the jumpSpeed value upwards
+                    characterVelocity += Vector3.up * jumpForce;
+
+                    // play sound
+                    audioSource.PlayOneShot(jumpSFX);
+
+                    // remember last time we jumped because we need to prevent snapping to ground for a short time
+                    m_LastTimeJumped = Time.time;
+                    hasJumpedThisFrame = true;
+
+                    // Force grounding to false
+                    isGrounded = false;
+                    m_GroundNormal = Vector3.up;
+
+                    nrOfJumpsLeft--;
+                }
+            }
+
+            if (((!CanDoubleJump && isGrounded) || (CanDoubleJump && nrOfJumpsLeft > 0)) && m_InputHandler.GetSlideInputDown())
+            {
+                characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
+
+                // then, add the jumpSpeed value upwards
+                characterVelocity += Vector3.up * slidingJump;
+                characterVelocity += transform.forward * slidingForward;
+
+                m_LastTimeJumped = Time.time;
+                hasJumpedThisFrame = true;
+
+                isGrounded = false;
+                m_GroundNormal = Vector3.up;
+
+                // play sound
+                audioSource.PlayOneShot(slideSFX);
+
+                nrOfJumpsLeft--;
+
+                if (SetCrouchingState(true, false))
+                {
+
+                }
             }
         }
 

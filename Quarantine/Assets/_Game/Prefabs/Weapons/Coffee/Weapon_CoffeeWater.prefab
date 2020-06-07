@@ -197,6 +197,7 @@ MonoBehaviour:
   ammoReloadRate: 1
   ammoReloadDelay: 1
   maxAmmo: 1
+  RemoveUponZeroAmmo: 1
   automaticReleaseOnCharged: 0
   maxChargeDuration: 2
   ammoUsedOnStartCharge: 1
