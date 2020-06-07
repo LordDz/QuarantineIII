@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
 public enum WeaponShootType
@@ -87,8 +88,8 @@ public class WeaponController : MonoBehaviour
     public GameObject muzzleFlashPrefab;
     [Tooltip("Unparent the muzzle flash instance on spawn")]
     public bool unparentMuzzleFlash;
-    [Tooltip("sound played when shooting")]
-    public AudioClip shootSFX;
+    [Tooltip("Random sound played when shooting")]
+    public List<AudioClip> shootSFX;
     [Tooltip("Sound played when changing to this weapon")]
     public AudioClip changeWeaponSFX;
 
@@ -342,9 +343,9 @@ public class WeaponController : MonoBehaviour
         m_LastTimeShot = Time.time;
 
         // play shoot SFX
-        if (shootSFX)
+        if (shootSFX.Count > 0)
         {
-            m_ShootAudioSource.PlayOneShot(shootSFX);
+            m_ShootAudioSource.PlayOneShot(shootSFX[Random.Range(0, shootSFX.Count - 1)]);
         }
 
         // Trigger attack animation if there is any

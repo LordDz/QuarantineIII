@@ -19,7 +19,7 @@ public class AudioUtility
         BossAttack_Railgun
     }
 
-    public static void CreateSFX(AudioClip clip, Vector3 position, AudioGroups audioGroup, float spatialBlend, float rolloffDistanceMin = 1f)
+    public static void CreateSFX(AudioClip clip, Vector3 position, AudioGroups audioGroup, float spatialBlend, float rolloffDistanceMin = 1f, float volume = 1.0f)
     {
         GameObject impactSFXInstance = new GameObject();
         impactSFXInstance.transform.position = position;
@@ -27,6 +27,7 @@ public class AudioUtility
         source.clip = clip;
         source.spatialBlend = spatialBlend;
         source.minDistance = rolloffDistanceMin;
+        source.volume = volume;
         source.Play();
 
         source.outputAudioMixerGroup = GetAudioGroup(audioGroup);
