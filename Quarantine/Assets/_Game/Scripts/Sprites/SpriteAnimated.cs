@@ -7,7 +7,7 @@ public class SpriteAnimated : MonoBehaviour
     public float frameSeconds = 1;
     //The file location of the sprites within the resources folder
     private SpriteRenderer spr;
-    public Sprite[] sprites;
+    //public Sprite[] sprites;
     public Material[] materials;
     private int frame = 0;
     private float deltaTime = 0;
@@ -32,10 +32,10 @@ public class SpriteAnimated : MonoBehaviour
             deltaTime -= frameSeconds;
             frame++;
             if (loop)
-                frame %= sprites.Length;
+                frame %= materials.Length;
             //Max limit
-            else if (frame >= sprites.Length)
-                frame = sprites.Length - 1;
+            else if (frame >= materials.Length)
+                frame = materials.Length - 1;
         }
         //Animate sprite with selected frame
         //spr.sprite = sprites[frame];
